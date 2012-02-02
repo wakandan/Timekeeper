@@ -1,0 +1,1 @@
+A Simple time keeper program to help keep track of when and how much time you spend on task. Should be used by time-valued people. Run it in the command line. Each time you finish a task, press <space> or <enter> and record down what you have done for the period. The output file is csv-formatted and could be processed further using excel
