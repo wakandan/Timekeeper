@@ -69,7 +69,7 @@ filename = sys.argv[0]+'.'+datetime.now().strftime(STRFMT_FILENAME)+'.txt'
 #if the file existed, open to append
 file_existed = os.path.exists(filename)
 
-if file_existed:
+if file_existed:    
     #get the last time stamp
     with open(filename, 'r') as f:
         lines = f.readlines()
@@ -86,7 +86,8 @@ f = open(filename, file_existed and 'a' or 'w')
 c = getch()
 while c!=chr(27):    
   if c==' ' or c==chr(13):
-    output_str = get_diff_msg(prev, datetime.now())    
+    current = datetime.now()
+    output_str = get_diff_msg(prev, current)    
     print output_str,
     reason = raw_input()
     f.write(output_str+reason+'\n')
